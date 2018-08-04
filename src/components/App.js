@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import VideoList from './VideoList';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Header />
-        <h1>Hello World!</h1>
+        <div className="container">
+          <VideoList />
+        </div>
       </div>
     );
   }
