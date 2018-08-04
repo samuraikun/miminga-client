@@ -22,10 +22,6 @@ const styles = {
 }
 
 class Header extends Component {
-  constructor() {
-    super();
-  }
-  
   render() {
     const { classes } = this.props;
     return (

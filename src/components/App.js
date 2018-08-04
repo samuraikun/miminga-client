@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from './Header';
 import VideoList from './VideoList';
 
@@ -7,9 +8,11 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <div className="container">
-          <VideoList />
-        </div>
+        <Router>
+          <div className="container">
+            <Route exact path="/" component={VideoList} />
+          </div>
+        </Router>
       </div>
     );
   }
