@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from './Header';
-import VideoList from './VideoList';
+import VideoCardList from './VideoCardList';
 
 class App extends Component {
   render() {
@@ -10,7 +10,7 @@ class App extends Component {
         <Header />
         <Router>
           <div className="container">
-            <Route exact path="/" component={VideoList} />
+            <Route exact path="/" component={VideoCardList} />
           </div>
         </Router>
       </div>

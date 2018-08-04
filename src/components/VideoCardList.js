@@ -3,7 +3,7 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Video from './Video';
+import VideoCard from './VideoCard';
 
 const styles = {
   root: {
@@ -12,7 +12,7 @@ const styles = {
   }
 };
 
-class VideoList extends Component {
+class VideoCardList extends Component {
   constructor(props) {
     super(props);
 
@@ -30,7 +30,7 @@ class VideoList extends Component {
     return videos.map(video => {
       return (
         <Grid key={video._id} item xs={3}>
-          <Video video={video} />
+          <VideoCard video={video} />
         </Grid>
       );
     });
@@ -49,8 +49,8 @@ class VideoList extends Component {
   }
 };
 
-VideoList.propTypes = {
+VideoCardList.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(VideoList);
+export default withStyles(styles)(VideoCardList);

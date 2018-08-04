@@ -17,7 +17,7 @@ const styles = {
   },
 };
 
-class Video extends Component {
+class VideoCard extends Component {
   constructor(props) {
     super(props);
 
@@ -62,8 +62,8 @@ class Video extends Component {
   }
 }
 
-Video.propTypes = {
+VideoCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Video);
+export default withStyles(styles)(VideoCard);
