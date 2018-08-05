@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
@@ -32,7 +33,7 @@ class VideoCard extends Component {
   }
 
   handleClick() {
-    console.log('click!');
+    this.props.history.push(`/video`);
   }
 
   render() {
@@ -66,4 +67,4 @@ VideoCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(VideoCard);
+export default withRouter(withStyles(styles)(VideoCard));
